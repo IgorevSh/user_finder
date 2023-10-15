@@ -44,9 +44,9 @@ export default {
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 &:hover{
+  cursor: pointer;
   .user_item_info {
     background-color: #e0e0e0;
-    cursor: pointer;
   }
 }
 .user_item_info {
