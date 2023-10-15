@@ -4,13 +4,13 @@
     <h4>Поиск сотрудников</h4>
     <input class="search_input" @input="filterUsers" placeholder="Введите ID или имя" v-model="searchField" />
     <p class="inner_error" v-if="userList?.error" >Внутренняя ошибка</p>
-    <div v-else->
+    <div v-else>
       <p class="search_result">Результаты</p>
       <p class="search_info" v-if="searchField?.trim()?.length==0">Начните поиск</p>
       <p class="search_info" v-if="filteredUsers?.length==0&&searchField?.trim()?.length>0&&!loader">Ничего не найдено</p>
       <div class="loader" v-if="loader&&searchField?.trim()?.length>0"></div>
     </div>
-    <div class="search_user_list" v-if="filteredUsers?.length>0">
+    <div class="search_user_list" v-if="filteredUsers?.length>0&&!loader">
       <user-item v-for="user in filteredUsers" :key="user.name" :user="user" />
     </div>
   </div>
