@@ -2,7 +2,7 @@
   <div class="user_item_wrapper" @click="setUserFromList">
     <div class="user_item_image">
       <img style="height: 70px" :src="user?.photo" v-if="user?.photo">
-      <img style="height: 70px" src="../../public/Rectangle.png" v-else />
+      <img style="height: 70px" src="../../public/Rectangle.png" v-else/>
     </div>
     <div class="user_item_info">
       <span class="user_item_name">{{user?.name}}</span>
